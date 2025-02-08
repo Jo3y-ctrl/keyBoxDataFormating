@@ -1,0 +1,23 @@
+# List of input data in the original format
+data = [
+    (*insert user data here make sure you have quotes and parenthesis for each entry ex. ("data")*),
+]
+ 
+# Define a function to format the data
+def format_data(data):
+    formatted_data = []
+    for entry in data:
+        student_id, first_name, last_name, email = entry
+        formatted_entry = f"{student_id}, {last_name}, {first_name}, Housing RA, {email}"
+        formatted_data.append(formatted_entry)
+    return "\n".join(formatted_data)
+ 
+# Format the data
+formatted_data = format_data(data)
+
+# Save the formatted data to a notepad file
+output_file = "formatted_data.txt"
+with open(output_file, "w") as file:
+    file.write(formatted_data)
+
+print(f"Data has been saved to {output_file}")
